@@ -1,3 +1,6 @@
+https://www.youtube.com/watch?v=k_lUlOclFVI&t=1173s  6:38-cal elkeszul az alap
+
+
 1. git init
 2. .gitignore 
       # npm folders to ignore
@@ -6,4 +9,33 @@
 3. npm init
       version: 0.0.1
       entry point: src/index.js 
-      
+4. npm i -D sass  
+5. package.json:  "scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "build": "sass src/scss:dist/css"
+  },
+6. src > scss > index.scss --->(.test { color: red} to check if  it appears on dist after run build, aztan ha atment a teszten,   
+  torolheto)
+7. npm run build (ez letrehozza a dist mappat)
+8. .gitignore ---> dist/
+9. npm i bootstrap
+10. src > scss > index.scss @import "../../node_modules/bootstrap/scss"
+11. npm run build (check if dist index-en megjelenik e bootstrap)
+12. package.json:   "scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "build": "sass src/scss:dist/css",
+  "watch": "sass --watch src/scss:dist/css"
+},
+13. npm run watch
+14. src > scss > uj fajl: _variables.scss : $primary: orange
+15. src > scss > index.scss @import "variables"
+16. check in dist > index if the primary color got changed
+17. copy node_modules > scss > variables.scss to src > scss > _variables.scss ra a primary sorra
+18. src > scss > index.scss @import "../../node_modules/bootstrap/scss/functions"; @import "../../node_modules/bootstrap/scss/mixins";
+19. npm run build     npm run watch
+20. index.html set up for testing bootstrap, and put this after title:   <link rel="stylesheet" href="/dist/css/index.css">
+21. check the test page if you turn (~301.sor) $primary $blue ---> orange on src > scss > _variables
+22. choose a nabar from bootstrap which has hamburger and set it in the html file, than add <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script> under the <link> and check if the hamburger works
+23.
+
+
